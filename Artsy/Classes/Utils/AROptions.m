@@ -11,6 +11,12 @@ NSString *const AROptionsTappingPartnerSendsToPartner = @"Partner name in feed g
     ];
 }
 
++ (void)resetDefaults
+{
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 + (BOOL)boolForOption:(NSString *)option
 {
    return [[NSUserDefaults standardUserDefaults] boolForKey:option];

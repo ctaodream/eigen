@@ -6,6 +6,8 @@ extern NSString *const AROptionsTappingPartnerSendsToPartner;
 
 @interface AROptions : NSObject
 
++ (void)resetDefaults;
+
 /// Returns all the current options
 + (NSArray *)labsOptions;
 
